@@ -27,9 +27,15 @@ async function scrapeLuckia() {
   await initializeLogStream(logFileName);
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: "new", // Using headless mode for Replit environment
     slowMo: 50,
-    devtools: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--disable-gpu'
+    ],
     executablePath: executablePath(),
   });
   const page = await browser.newPage();

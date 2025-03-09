@@ -13,7 +13,7 @@
     "serve": "npx tsx src/bookmakers/luckia/scrapLuckia.ts",
     "inspect": "node --inspect-brk src/bookmakers/luckia/scrapLuckia.ts",
     "start": "npm run serve",
-    "test": "jest --forceExit --coverage --verbose",
+    "test": "jest --forceExit --coverage --verbose --passWithNoTests",
     "watch-node": "nodemon src/server.js",
     "watch-test": "npm run test -- --watchAll",
     "watch-ts": "tsc -w"
