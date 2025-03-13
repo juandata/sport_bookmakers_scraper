@@ -26,9 +26,9 @@ async function scrapeLuckia() {
   await initializeLogStream(logFileName);
 
   const browser = await puppeteer.launch({
-    headless: "new", //change for true when working locally
+    headless: false, //change for false when working locally and for "new" when working on production
     slowMo: 50,
-    //devtools: true,
+    devtools: true,
   });
   const page = await browser.newPage();
   await page.setViewport({
