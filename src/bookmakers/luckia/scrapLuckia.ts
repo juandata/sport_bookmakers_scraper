@@ -3,7 +3,6 @@ import colors from "colors";
 import fs from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import { executablePath } from "puppeteer";
 import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound";
 import { LuckiaData, Market, Participant } from "../../types/luckiaDataTypes";
 import { delay } from "../../utils/index";
@@ -30,7 +29,6 @@ async function scrapeLuckia() {
     headless: false,
     slowMo: 50,
     devtools: true,
-    executablePath: executablePath(),
   });
   const page = await browser.newPage();
   await page.setViewport({
