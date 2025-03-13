@@ -1,12 +1,12 @@
 import puppeteer from "puppeteer-extra";
-import colors from "colors";
+import * as colors from "colors";
 import fs from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound";
-import { LuckiaData, Market, Participant } from "../../types/luckiaDataTypes";
-import { delay } from "../../utils/index";
-import {initializeLogStream, closeLogStream} from "../../utils/logger";
+import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound.ts";
+import { LuckiaData, Market, Participant } from "../../types/luckiaDataTypes.ts";
+import { delay } from "../../utils/index.ts";
+import {initializeLogStream, closeLogStream} from "../../utils/logger.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
