@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build-ts": "tsc",
+    "serve-replt": "node dist/bookmakers/luckia/scrapLuckia.js",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "serve-debug": "node --inspect-brk node_modules/.bin/tsx src/bookmakers/luckia/scrapLuckia.ts",
     "serve": "npx tsx src/bookmakers/luckia/scrapLuckia.ts",
