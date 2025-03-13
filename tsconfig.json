@@ -19,6 +19,7 @@
         "pretty": true,
         "noFallthroughCasesInSwitch": true,
         "allowUnreachableCode": false,
+        "moduleResolution": "nodenext"
     },
     "include": [
         "src",
