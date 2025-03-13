@@ -6,6 +6,14 @@
   "type": "module",
   "author": "Juan David Tabares Arce",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=10.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juandata/sport_bookmakers_scraper.git"
+  },
   "scripts": {
     "build-ts": "tsc",
     "serve-replt": "node dist/bookmakers/luckia/scrapLuckia.js",
