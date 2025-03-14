@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer-extra";
+import puppeteerExtra  from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import * as colors from "colors";
 import fs from "fs/promises";
@@ -22,7 +22,7 @@ const elementTimeout = 10000;
 const htmlDumpDir = path.join(__dirname, "..", "..", "htmlDumps");
 const logFileName = "luckia_scraping.log";
 
-puppeteer.use(StealthPlugin());
+puppeteerExtra.use(StealthPlugin());
 
 async function scrapeLuckia() {
   const start = new Date().getTime();
@@ -31,7 +31,7 @@ async function scrapeLuckia() {
 
   await initializeLogStream(logFileName);
 
-  const browser = await puppeteer.launch({
+  const browser = await puppeteerExtra.launch({
     headless: false, //change for false when working locally and for "new" when working on production
     slowMo: 50,
     devtools: true,
