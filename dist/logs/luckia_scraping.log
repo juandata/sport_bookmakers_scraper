@@ -1,0 +1,143 @@
+[2025-03-14T01:50:12.027Z] Current .spinnerUpcoming count is : 1
+[2025-03-14T01:50:13.403Z] Current .spinnerUpcoming count is : 1
+[2025-03-14T01:50:14.751Z] Current .spinnerUpcoming count is : 1
+[2025-03-14T01:50:16.114Z] Current .spinnerUpcoming count is : 1
+[2025-03-14T01:50:17.523Z] Current .spinnerUpcoming count is : 1
+[2025-03-14T01:50:18.456Z] Current .spinnerUpcoming count is : 0
+[2025-03-14T01:50:18.457Z] Finished scrolling. Found 0 elements.
+[2025-03-14T01:50:18.555Z] [32mHTML saved to E:\MERN\web_scraper\dist\htmlDumps\after_scrolling.html[39m
+[2025-03-14T01:50:19.125Z] Processing SportGroup iteration number: 0
+[2025-03-14T01:50:19.876Z] processing Contest number: 0
+[2025-03-14T01:50:26.378Z] Clicked on the breadcrumb for eventId: 58467213
+[2025-03-14T01:50:27.224Z] Successfully navigated back for eventId: 58467213
+[2025-03-14T01:50:27.224Z] processing Contest number: 1
+[2025-03-14T01:50:33.356Z] Clicked on the breadcrumb for eventId: 58414333
+[2025-03-14T01:50:34.093Z] Successfully navigated back for eventId: 58414333
+[2025-03-14T01:50:34.094Z] processing Contest number: 2
+[2025-03-14T01:50:40.227Z] Clicked on the breadcrumb for eventId: 58497813
+[2025-03-14T01:50:40.961Z] Successfully navigated back for eventId: 58497813
+[2025-03-14T01:50:40.962Z] processing Contest number: 3
+[2025-03-14T01:50:46.924Z] Clicked on the breadcrumb for eventId: 58490505
+[2025-03-14T01:50:47.672Z] Successfully navigated back for eventId: 58490505
+[2025-03-14T01:50:47.673Z] processing Contest number: 4
+[2025-03-14T01:50:53.621Z] Clicked on the breadcrumb for eventId: 58836893
+[2025-03-14T01:50:54.370Z] Successfully navigated back for eventId: 58836893
+[2025-03-14T01:50:54.371Z] processing Contest number: 5
+[2025-03-14T01:51:07.080Z] [31mTimeout waiting for .psk-event-details for contest 56779985. Skipping markets for this contest. Error is : TimeoutError: Waiting for selector `.psk-event-details` failed: Waiting failed: 10000ms exceeded}[39m
+[2025-03-14T01:51:07.080Z] processing Contest number: 6
+[2025-03-14T01:51:19.719Z] [31mTimeout waiting for .psk-event-details for contest 56779981. Skipping markets for this contest. Error is : TimeoutError: Waiting for selector `.psk-event-details` failed: Waiting failed: 10000ms exceeded}[39m
+[2025-03-14T01:51:19.720Z] Processing SportGroup iteration number: 1
+[2025-03-14T01:51:20.470Z] processing Contest number: 0
+[2025-03-14T01:51:26.575Z] Clicked on the breadcrumb for eventId: 58399681
+[2025-03-14T01:51:27.307Z] Successfully navigated back for eventId: 58399681
+[2025-03-14T01:51:27.307Z] processing Contest number: 1
+[2025-03-14T01:51:33.344Z] Clicked on the breadcrumb for eventId: 58643173
+[2025-03-14T01:51:34.075Z] Successfully navigated back for eventId: 58643173
+[2025-03-14T01:51:34.075Z] processing Contest number: 2
+[2025-03-14T01:51:40.146Z] Clicked on the breadcrumb for eventId: 58722173
+[2025-03-14T01:51:40.893Z] Successfully navigated back for eventId: 58722173
+[2025-03-14T01:51:40.894Z] processing Contest number: 3
+[2025-03-14T01:51:46.875Z] Clicked on the breadcrumb for eventId: 58722171
+[2025-03-14T01:51:47.639Z] Successfully navigated back for eventId: 58722171
+[2025-03-14T01:51:47.639Z] processing Contest number: 4
+[2025-03-14T01:51:53.520Z] Clicked on the breadcrumb for eventId: 58873945
+[2025-03-14T01:51:54.287Z] Successfully navigated back for eventId: 58873945
+[2025-03-14T01:51:54.287Z] processing Contest number: 5
+[2025-03-14T01:52:00.192Z] Clicked on the breadcrumb for eventId: 58870445
+[2025-03-14T01:52:00.925Z] Successfully navigated back for eventId: 58870445
+[2025-03-14T01:52:00.926Z] processing Contest number: 6
+[2025-03-14T01:52:06.838Z] Clicked on the breadcrumb for eventId: 58870443
+[2025-03-14T01:52:07.586Z] Successfully navigated back for eventId: 58870443
+[2025-03-14T01:52:07.587Z] Processing SportGroup iteration number: 2
+[2025-03-14T01:52:08.579Z] processing Contest number: 0
+[2025-03-14T01:52:14.648Z] Clicked on the breadcrumb for eventId: 52630805
+[2025-03-14T01:52:15.382Z] Successfully navigated back for eventId: 52630805
+[2025-03-14T01:52:15.383Z] processing Contest number: 1
+[2025-03-14T01:52:21.731Z] Clicked on the breadcrumb for eventId: 52631949
+[2025-03-14T01:52:22.492Z] Successfully navigated back for eventId: 52631949
+[2025-03-14T01:52:22.492Z] processing Contest number: 2
+[2025-03-14T01:52:28.686Z] Clicked on the breadcrumb for eventId: 52631491
+[2025-03-14T01:52:29.467Z] Successfully navigated back for eventId: 52631491
+[2025-03-14T01:52:29.468Z] processing Contest number: 3
+[2025-03-14T01:52:35.577Z] Clicked on the breadcrumb for eventId: 58863431
+[2025-03-14T01:52:36.314Z] Successfully navigated back for eventId: 58863431
+[2025-03-14T01:52:36.315Z] processing Contest number: 4
+[2025-03-14T01:52:42.571Z] Clicked on the breadcrumb for eventId: 58702157
+[2025-03-14T01:52:43.319Z] Successfully navigated back for eventId: 58702157
+[2025-03-14T01:52:43.319Z] processing Contest number: 5
+[2025-03-14T01:52:49.463Z] Clicked on the breadcrumb for eventId: 58751365
+[2025-03-14T01:52:50.197Z] Successfully navigated back for eventId: 58751365
+[2025-03-14T01:52:50.197Z] processing Contest number: 6
+[2025-03-14T01:52:56.284Z] Clicked on the breadcrumb for eventId: 58756667
+[2025-03-14T01:52:57.019Z] Successfully navigated back for eventId: 58756667
+[2025-03-14T01:52:57.020Z] processing Contest number: 7
+[2025-03-14T01:53:03.440Z] Clicked on the breadcrumb for eventId: 58864283
+[2025-03-14T01:53:04.204Z] Successfully navigated back for eventId: 58864283
+[2025-03-14T01:53:04.204Z] processing Contest number: 8
+[2025-03-14T01:53:10.369Z] Clicked on the breadcrumb for eventId: 58862071
+[2025-03-14T01:53:11.088Z] Successfully navigated back for eventId: 58862071
+[2025-03-14T01:53:11.089Z] processing Contest number: 9
+[2025-03-14T01:53:17.090Z] Clicked on the breadcrumb for eventId: 58772959
+[2025-03-14T01:53:17.902Z] Successfully navigated back for eventId: 58772959
+[2025-03-14T01:53:17.902Z] processing Contest number: 10
+[2025-03-14T01:53:24.134Z] Clicked on the breadcrumb for eventId: 58751683
+[2025-03-14T01:53:24.900Z] Successfully navigated back for eventId: 58751683
+[2025-03-14T01:53:24.900Z] processing Contest number: 11
+[2025-03-14T01:53:31.286Z] Clicked on the breadcrumb for eventId: 58864245
+[2025-03-14T01:53:32.020Z] Successfully navigated back for eventId: 58864245
+[2025-03-14T01:53:32.021Z] processing Contest number: 12
+[2025-03-14T01:53:38.554Z] Clicked on the breadcrumb for eventId: 58869237
+[2025-03-14T01:53:39.300Z] Successfully navigated back for eventId: 58869237
+[2025-03-14T01:53:39.300Z] processing Contest number: 13
+[2025-03-14T01:53:45.525Z] Clicked on the breadcrumb for eventId: 58864349
+[2025-03-14T01:53:46.262Z] Successfully navigated back for eventId: 58864349
+[2025-03-14T01:53:46.262Z] processing Contest number: 14
+[2025-03-14T01:53:52.843Z] Clicked on the breadcrumb for eventId: 58864269
+[2025-03-14T01:53:53.561Z] Successfully navigated back for eventId: 58864269
+[2025-03-14T01:53:53.561Z] processing Contest number: 15
+[2025-03-14T01:53:59.743Z] Clicked on the breadcrumb for eventId: 58775445
+[2025-03-14T01:54:00.631Z] Successfully navigated back for eventId: 58775445
+[2025-03-14T01:54:00.631Z] processing Contest number: 16
+[2025-03-14T01:54:06.819Z] Clicked on the breadcrumb for eventId: 58862073
+[2025-03-14T01:54:07.759Z] Successfully navigated back for eventId: 58862073
+[2025-03-14T01:54:07.759Z] processing Contest number: 17
+[2025-03-14T01:54:14.293Z] Clicked on the breadcrumb for eventId: 58769527
+[2025-03-14T01:54:15.213Z] Successfully navigated back for eventId: 58769527
+[2025-03-14T01:54:15.213Z] processing Contest number: 18
+[2025-03-14T01:54:21.489Z] Clicked on the breadcrumb for eventId: 58664103
+[2025-03-14T01:54:22.261Z] Successfully navigated back for eventId: 58664103
+[2025-03-14T01:54:22.261Z] processing Contest number: 19
+[2025-03-14T01:54:28.600Z] Clicked on the breadcrumb for eventId: 58719279
+[2025-03-14T01:54:29.592Z] Successfully navigated back for eventId: 58719279
+[2025-03-14T01:54:29.593Z] processing Contest number: 20
+[2025-03-14T01:54:35.627Z] Clicked on the breadcrumb for eventId: 58744911
+[2025-03-14T01:54:36.377Z] Successfully navigated back for eventId: 58744911
+[2025-03-14T01:54:36.378Z] Processing SportGroup iteration number: 3
+[2025-03-14T01:54:37.096Z] processing Contest number: 0
+[2025-03-14T01:54:43.839Z] Clicked on the breadcrumb for eventId: 51247805
+[2025-03-14T01:54:44.666Z] Successfully navigated back for eventId: 51247805
+[2025-03-14T01:54:44.666Z] processing Contest number: 1
+[2025-03-14T01:54:51.010Z] Clicked on the breadcrumb for eventId: 51247813
+[2025-03-14T01:54:51.931Z] Successfully navigated back for eventId: 51247813
+[2025-03-14T01:54:51.931Z] processing Contest number: 2
+[2025-03-14T01:54:58.442Z] Clicked on the breadcrumb for eventId: 51574457
+[2025-03-14T01:54:59.160Z] Successfully navigated back for eventId: 51574457
+[2025-03-14T01:54:59.160Z] processing Contest number: 3
+[2025-03-14T01:55:05.472Z] Clicked on the breadcrumb for eventId: 50856761
+[2025-03-14T01:55:06.269Z] Successfully navigated back for eventId: 50856761
+[2025-03-14T01:55:06.270Z] Processing SportGroup iteration number: 4
+[2025-03-14T01:55:06.992Z] processing Contest number: 0
+[2025-03-14T01:55:13.256Z] Clicked on the breadcrumb for eventId: 58209621
+[2025-03-14T01:55:14.119Z] Successfully navigated back for eventId: 58209621
+[2025-03-14T01:55:14.120Z] Processing SportGroup iteration number: 5
+[2025-03-14T01:55:14.838Z] processing Contest number: 0
+[2025-03-14T01:55:20.840Z] Clicked on the breadcrumb for eventId: 58855431
+[2025-03-14T01:55:21.576Z] Successfully navigated back for eventId: 58855431
+[2025-03-14T01:55:21.576Z] processing Contest number: 1
+[2025-03-14T01:55:27.825Z] Clicked on the breadcrumb for eventId: 58855435
+[2025-03-14T01:55:28.543Z] Successfully navigated back for eventId: 58855435
+[2025-03-14T01:55:28.543Z] processing Contest number: 2
+[2025-03-14T01:55:34.658Z] Clicked on the breadcrumb for eventId: 58855433
+[2025-03-14T01:55:35.407Z] Successfully navigated back for eventId: 58855433
+[2025-03-14T01:55:35.410Z] [32mSAVED luckia_data.json DATA SUCCESSFULLY[39m
+[2025-03-14T01:55:35.410Z] [34mExecution time: 336873 ms[39m

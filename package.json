@@ -1,6 +1,6 @@
 {
   "name": "sport_bookmakers_scraper",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Sport bookmakers scraper",
   "main": "dist/bookmakers/scrapLuckia.js",
   "type": "module",
