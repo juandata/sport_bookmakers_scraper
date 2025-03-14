@@ -1,4 +1,5 @@
-import puppeteerExtra  from "puppeteer-extra";
+import puppeteer from "puppeteer";
+import puppeteerExtra from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import * as colors from "colors";
 import fs from "fs/promises";
@@ -78,7 +79,7 @@ async function scrapeLuckia() {
     for (let index = 0; index < sportGroups.length; index++) {
       console.log(`Processing SportGroup iteration number: ${index}`);
       const sportGroup = sportGroups[index];
-      let sportId, sportName;
+      let sportName;
       const sportGroupClass = await sportGroup.evaluate((el) => el.className);
       const sportGroupId = sportGroupClass
         .split(" ")
@@ -89,7 +90,7 @@ async function scrapeLuckia() {
         ?.split("-");
 
       if (sportGroupId && sportGroupName) {
-        sportId = sportGroupId.replace("sportId", "");
+        //sportId = sportGroupId.replace("sportId", "");
         sportName = sportGroupName[sportGroupName.length - 1];
         if (!allData[sportName]) {
           allData[sportName] = {};
@@ -109,8 +110,7 @@ async function scrapeLuckia() {
         } catch (error) {
           console.log(
             colors.red(
-              `Error in process contest ${index2}, inside loop: `,
-              error
+              `Error in process contest ${index2}, inside loop: ${error}`
             )
           );
           await goBack(page, "N/A");
@@ -126,7 +126,7 @@ async function scrapeLuckia() {
     );
     console.log(colors.green(`SAVED ${jsonDataName} DATA SUCCESSFULLY`));
   } catch (error) {
-    console.log(colors.red("Error saving data or scraping: ", error));
+    console.log(colors.red(`Error saving data or scraping: ${error} `));
   } finally {
     const end = new Date().getTime();
     const executionTime = end - start;
@@ -193,11 +193,7 @@ async function processContest(
 
     const eventHeading = await contest.$(".lp-event__heading");
     if (eventHeading) {
-      await eventHeading.scrollIntoView({
-        behavior: "auto",
-        block: "center",
-        inline: "nearest",
-      });
+      await eventHeading.scrollIntoView();
       await delay(500);
       try {
         await Promise.all([
