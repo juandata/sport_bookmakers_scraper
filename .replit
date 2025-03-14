@@ -1,0 +1,10 @@
+
+modules = ["nodejs-20"]
+run = "npm run serve"
+
+[nix]
+channel = "stable-24_05"
+packages = ["glib", "gtk3", "libxkbcommon", "libxml2", "libxslt", "nss", "nspr", "atk", "at-spi2-atk", "cups", "dbus", "expat", "mesa", "libdrm", "xorg.libxshmfence"]
+
+[deployment]
+run = ["sh", "-c", "npm run serve"]

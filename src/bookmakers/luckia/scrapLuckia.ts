@@ -313,3 +313,4 @@ async function saveHTML(page: puppeteer.Page, filename: string): Promise<void> {
 }
 
 scrapeLuckia();
+
