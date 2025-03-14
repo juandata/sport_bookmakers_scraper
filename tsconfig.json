@@ -6,9 +6,9 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "declaration": true,
-        "target": "es5",
+        "target": "es2020",
         "lib": [
-            "es2015",
+            "es2020",
             "dom"
         ],
         "outDir": "./dist",
@@ -20,12 +20,11 @@
         "noFallthroughCasesInSwitch": true,
         "allowUnreachableCode": false,
         "moduleResolution": "nodenext",
-        "allowImportingTsExtensions": true,
-        "emitDeclarationOnly": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "emitDeclarationOnly": false, 
     },
     "include": [
         "src",
