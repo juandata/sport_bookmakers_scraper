@@ -5,14 +5,14 @@ import colors from "colors";
 import fs from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound.ts";
+import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound.js";
 import {
   LuckiaData,
   Market,
   Participant,
-} from "../../types/luckiaDataTypes.ts";
-import { delay } from "../../utils/index.ts";
-import { initializeLogStream, closeLogStream } from "../../utils/logger.ts";
+} from "../../types/luckiaDataTypes.js";
+import { delay } from "../../utils/index.js";
+import { initializeLogStream, closeLogStream } from "../../utils/logger.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -313,4 +313,3 @@ async function saveHTML(page: puppeteer.Page, filename: string): Promise<void> {
 }
 
 scrapeLuckia();
-

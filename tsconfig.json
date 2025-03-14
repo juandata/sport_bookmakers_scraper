@@ -24,7 +24,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
-        "emitDeclarationOnly": false, 
+        "emitDeclarationOnly": false,
     },
     "include": [
         "src",
