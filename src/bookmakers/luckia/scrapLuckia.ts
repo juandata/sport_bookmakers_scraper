@@ -1,13 +1,18 @@
-import puppeteer from "puppeteer-extra";
+import puppeteer from "puppeteer";
+import puppeteerExtra from "puppeteer-extra";
+import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import colors from "colors";
 import fs from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import { executablePath } from "puppeteer";
-import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound";
-import { LuckiaData, Market, Participant } from "../../types/luckiaDataTypes";
-import { delay } from "../../utils/index";
-import {initializeLogStream, closeLogStream} from "../../utils/logger";
+import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound.ts";
+import {
+  LuckiaData,
+  Market,
+  Participant,
+} from "../../types/luckiaDataTypes.ts";
+import { delay } from "../../utils/index.ts";
+import { initializeLogStream, closeLogStream } from "../../utils/logger.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,26 +22,20 @@ const navigationTimeout = 30000;
 const elementTimeout = 10000;
 const htmlDumpDir = path.join(__dirname, "..", "..", "htmlDumps");
 const logFileName = "luckia_scraping.log";
-
+// @ts-expect-error expect error
+puppeteerExtra.use(StealthPlugin());
 
 async function scrapeLuckia() {
   const start = new Date().getTime();
 
-  let allData: LuckiaData = {};
+  const allData: LuckiaData = {};
 
   await initializeLogStream(logFileName);
-
-  const browser = await puppeteer.launch({
-    headless: "new", // Using headless mode for Replit environment
+  // @ts-expect-error expect error
+  const browser = await puppeteerExtra.launch({
+    headless: false, //change for false when working locally and for "new" when working on production
     slowMo: 50,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-accelerated-2d-canvas',
-      '--disable-gpu'
-    ],
-    executablePath: executablePath(),
+    devtools: true,
   });
   const page = await browser.newPage();
   await page.setViewport({
@@ -80,7 +79,7 @@ async function scrapeLuckia() {
     for (let index = 0; index < sportGroups.length; index++) {
       console.log(`Processing SportGroup iteration number: ${index}`);
       const sportGroup = sportGroups[index];
-      let sportId, sportName;
+      let sportName;
       const sportGroupClass = await sportGroup.evaluate((el) => el.className);
       const sportGroupId = sportGroupClass
         .split(" ")
@@ -91,7 +90,7 @@ async function scrapeLuckia() {
         ?.split("-");
 
       if (sportGroupId && sportGroupName) {
-        sportId = sportGroupId.replace("sportId", "");
+        //sportId = sportGroupId.replace("sportId", "");
         sportName = sportGroupName[sportGroupName.length - 1];
         if (!allData[sportName]) {
           allData[sportName] = {};
@@ -111,8 +110,7 @@ async function scrapeLuckia() {
         } catch (error) {
           console.log(
             colors.red(
-              `Error in process contest ${index2}, inside loop: `,
-              error
+              `Error in process contest ${index2}, inside loop: ${error}`
             )
           );
           await goBack(page, "N/A");
@@ -128,20 +126,20 @@ async function scrapeLuckia() {
     );
     console.log(colors.green(`SAVED ${jsonDataName} DATA SUCCESSFULLY`));
   } catch (error) {
-    console.log(colors.red("Error saving data or scraping: ", error));
+    console.log(colors.red(`Error saving data or scraping: ${error} `));
   } finally {
     const end = new Date().getTime();
     const executionTime = end - start;
     console.log(colors.blue(`Execution time: ${executionTime} ms`));
     await browser.close();
-    closeLogStream(); 
+    closeLogStream();
   }
 }
 
 async function processContest(
   page: puppeteer.Page,
   contest: puppeteer.ElementHandle,
-  allData: any,
+  allData: LuckiaData,
   sportName: string
 ): Promise<void> {
   const eventId = await contest.evaluate(
@@ -195,11 +193,7 @@ async function processContest(
 
     const eventHeading = await contest.$(".lp-event__heading");
     if (eventHeading) {
-      await eventHeading.scrollIntoView({
-        behavior: "auto",
-        block: "center",
-        inline: "nearest",
-      });
+      await eventHeading.scrollIntoView();
       await delay(500);
       try {
         await Promise.all([
@@ -212,7 +206,7 @@ async function processContest(
       } catch (error) {
         console.log(
           colors.red(
-            `Timeout waiting for .psk-event-details for contest ${eventId}. Skipping markets for this contest.`
+            `Timeout waiting for .psk-event-details for contest ${eventId}. Skipping markets for this contest. Error is : ${error}}`
           )
         );
         return;
@@ -259,9 +253,10 @@ async function processContest(
       allData[sportName][categoryName] = {};
     }
     if (!allData[sportName][categoryName][categorySubName]) {
+      // @ts-expect-error expect error
       allData[sportName][categoryName][categorySubName] = [];
     }
-
+    // @ts-expect-error expect error
     allData[sportName][categoryName][categorySubName].push({
       eventId,
       participants,
@@ -270,8 +265,8 @@ async function processContest(
 
     await goBack(page, eventId);
   } catch (error) {
-    console.log(colors.red(`Error processing contest ${eventId}:`, error));
-    throw error; 
+    console.log(colors.red(`Error processing contest ${eventId}: ${error}`));
+    throw error;
   }
 }
 
@@ -318,3 +313,4 @@ async function saveHTML(page: puppeteer.Page, filename: string): Promise<void> {
 }
 
 scrapeLuckia();
+

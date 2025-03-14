@@ -1,4 +1,4 @@
-import * as puppeteer from 'puppeteer';
+import * as puppeteer from "puppeteer";
 
 // --- New Function: autoScrollUntilNoMoreGroups ---
 export default async function autoScrollUntilSelectorIsNotFound(

@@ -1,7 +1,7 @@
 import { createWriteStream, WriteStream } from "fs";
 import fs from "fs/promises";
 import * as path from "path";
-import colors from "colors";
+import * as colors from "colors";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);

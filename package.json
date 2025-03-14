@@ -2,12 +2,21 @@
   "name": "sport_bookmakers_scraper",
   "version": "0.1",
   "description": "Sport bookmakers scraper",
-  "main": "app.js",
+  "main": "dist/bookmakers/scrapLuckia.js",
   "type": "module",
   "author": "Juan David Tabares Arce",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juandata/sport_bookmakers_scraper.git"
+  },
   "scripts": {
     "build-ts": "tsc",
+    "serve-replt": "node dist/bookmakers/luckia/scrapLuckia.js",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "serve-debug": "node --inspect-brk node_modules/.bin/tsx src/bookmakers/luckia/scrapLuckia.ts",
     "serve": "npx tsx src/bookmakers/luckia/scrapLuckia.ts",
@@ -19,32 +28,39 @@
     "watch-ts": "tsc -w"
   },
   "dependencies": {
-    "@types/chai": "^4.1.7",
+    "@babel/parser": "^7.26.10",
+    "@babel/types": "^7.26.10",
     "@types/jest": "^29.5.14",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.0.8",
-    "@types/puppeteer": "^1.12.4",
     "chai": "^4.2.0",
     "colors": "^1.4.0",
     "copyfiles": "^2.1.0",
+    "expect": "^29.7.0",
     "it-each": "^0.4.0",
     "jest": "^29.7.0",
     "mocha": "^6.1.4",
     "mochawesome": "^4.0.0",
     "pre-commit": "latest",
+    "pretty-format": "^29.7.0",
     "puppeteer": "^24.1.0",
     "puppeteer-debug": "^1.0.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "rimraf": "^2.6.3",
     "selenium-webdriver": "^4.28.1",
-    "ts-jest": "^29.2.5",
-    "ts-node": "^8.2.0",
-    "tslint": "^5.17.0",
-    "tslint-config-airbnb": "^5.11.1",
+    "ts-node": "^10.9.2",
     "typescript": ">=4.3 <6"
   },
   "devDependencies": {
-    "tsx": "^4.19.2"
+    "@eslint/js": "^9.22.0",
+    "@types/chai": "^4.1.7",
+    "@types/node": "^16.11.20",
+    "@types/puppeteer": "^1.12.4",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "ts-jest": "^29.2.5",
+    "tslint": "^5.17.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tsx": "^4.19.2",
+    "typescript-eslint": "^8.26.1"
   }
 }

@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "es2020",
+        "module": "NodeNext",
         "noImplicitAny": false,
         "sourceMap": true,
         "removeComments": true,
@@ -19,6 +19,13 @@
         "pretty": true,
         "noFallthroughCasesInSwitch": true,
         "allowUnreachableCode": false,
+        "moduleResolution": "nodenext",
+        "allowImportingTsExtensions": true,
+        "emitDeclarationOnly": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true
     },
     "include": [
         "src",
