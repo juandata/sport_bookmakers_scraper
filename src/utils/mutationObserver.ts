@@ -2,7 +2,7 @@
  * The user wants to observe the changes in class names and IDs of elements as the webpage loads. This requires monitoring the DOM for mutations, specifically changes to the class and id attributes of elements. We can use a MutationObserver to detect these changes. Since the user is asking about the whole page, we should observe the body element and its descendants. We need to collect the initial state of the class names and IDs, then set up the observer to track changes, and finally, log the changes to the console.
  */
 
-const initialData = [];
+/*const initialData = [];
 const allElements = document.querySelectorAll("*");
 
 allElements.forEach((el) => {
@@ -45,3 +45,4 @@ const data = {
   message:
     "MutationObserver is now monitoring class and ID changes. Check the console for updates.",
 };
+*/

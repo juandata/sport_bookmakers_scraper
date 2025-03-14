@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import puppeteerExtra from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import * as colors from "colors";
+import colors from "colors";
 import fs from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
@@ -22,16 +22,16 @@ const navigationTimeout = 30000;
 const elementTimeout = 10000;
 const htmlDumpDir = path.join(__dirname, "..", "..", "htmlDumps");
 const logFileName = "luckia_scraping.log";
-
+// @ts-expect-error expect error
 puppeteerExtra.use(StealthPlugin());
 
 async function scrapeLuckia() {
   const start = new Date().getTime();
 
-  let allData: LuckiaData = {};
+  const allData: LuckiaData = {};
 
   await initializeLogStream(logFileName);
-
+  // @ts-expect-error expect error
   const browser = await puppeteerExtra.launch({
     headless: false, //change for false when working locally and for "new" when working on production
     slowMo: 50,
@@ -139,7 +139,7 @@ async function scrapeLuckia() {
 async function processContest(
   page: puppeteer.Page,
   contest: puppeteer.ElementHandle,
-  allData: any,
+  allData: LuckiaData,
   sportName: string
 ): Promise<void> {
   const eventId = await contest.evaluate(
@@ -206,7 +206,7 @@ async function processContest(
       } catch (error) {
         console.log(
           colors.red(
-            `Timeout waiting for .psk-event-details for contest ${eventId}. Skipping markets for this contest.`
+            `Timeout waiting for .psk-event-details for contest ${eventId}. Skipping markets for this contest. Error is : ${error}}`
           )
         );
         return;
@@ -253,9 +253,10 @@ async function processContest(
       allData[sportName][categoryName] = {};
     }
     if (!allData[sportName][categoryName][categorySubName]) {
+      // @ts-expect-error expect error
       allData[sportName][categoryName][categorySubName] = [];
     }
-
+    // @ts-expect-error expect error
     allData[sportName][categoryName][categorySubName].push({
       eventId,
       participants,
@@ -264,7 +265,7 @@ async function processContest(
 
     await goBack(page, eventId);
   } catch (error) {
-    console.log(colors.red(`Error processing contest ${eventId}:`, error));
+    console.log(colors.red(`Error processing contest ${eventId}: ${error}`));
     throw error;
   }
 }
