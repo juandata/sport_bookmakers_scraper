@@ -1,12 +1,17 @@
 import puppeteer from "puppeteer-extra";
+import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import * as colors from "colors";
 import fs from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
 import autoScrollUntilSelectorIsNotFound from "../../utils/autoScrollUntilSelectorIsNotFound.ts";
-import { LuckiaData, Market, Participant } from "../../types/luckiaDataTypes.ts";
+import {
+  LuckiaData,
+  Market,
+  Participant,
+} from "../../types/luckiaDataTypes.ts";
 import { delay } from "../../utils/index.ts";
-import {initializeLogStream, closeLogStream} from "../../utils/logger.ts";
+import { initializeLogStream, closeLogStream } from "../../utils/logger.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +22,7 @@ const elementTimeout = 10000;
 const htmlDumpDir = path.join(__dirname, "..", "..", "htmlDumps");
 const logFileName = "luckia_scraping.log";
 
+puppeteer.use(StealthPlugin());
 
 async function scrapeLuckia() {
   const start = new Date().getTime();
@@ -126,7 +132,7 @@ async function scrapeLuckia() {
     const executionTime = end - start;
     console.log(colors.blue(`Execution time: ${executionTime} ms`));
     await browser.close();
-    closeLogStream(); 
+    closeLogStream();
   }
 }
 
@@ -263,7 +269,7 @@ async function processContest(
     await goBack(page, eventId);
   } catch (error) {
     console.log(colors.red(`Error processing contest ${eventId}:`, error));
-    throw error; 
+    throw error;
   }
 }
 
