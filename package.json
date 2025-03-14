@@ -15,7 +15,8 @@
     "url": "https://github.com/juandata/sport_bookmakers_scraper.git"
   },
   "scripts": {
-    "build-ts": "tsc",
+    "clean": "rimraf dist",
+    "build-ts": "npm run clean && tsc",
     "serve-replit": "node dist/bookmakers/luckia/scrapLuckia.js",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "serve-debug": "node --inspect-brk node_modules/.bin/tsx src/bookmakers/luckia/scrapLuckia.ts",
