@@ -151,3 +151,24 @@
 [2025-03-15T17:33:49.110Z] Processing SportGroup iteration number: 0
 [2025-03-15T17:33:49.171Z] [31mError getting sportName and sportId classes[39m
 [2025-03-15T17:33:49.171Z] [34mExecution time: 24925 ms[39m
+[2025-03-15T17:37:33.304Z] Current .spinnerUpcoming count is : 1
+[2025-03-15T17:37:34.754Z] Current .spinnerUpcoming count is : 1
+[2025-03-15T17:37:35.975Z] Current .spinnerUpcoming count is : 1
+[2025-03-15T17:37:37.350Z] Current .spinnerUpcoming count is : 1
+[2025-03-15T17:37:38.965Z] Current .spinnerUpcoming count is : 1
+[2025-03-15T17:37:40.380Z] Current .spinnerUpcoming count is : 1
+[2025-03-15T17:37:40.380Z] Finished scrolling. Found 1 elements.
+[2025-03-15T17:37:40.550Z] [32mHTML saved to E:\MERN\web_scraper\dist\htmlDumps\after_scrolling.html[39m
+[2025-03-15T17:37:41.106Z] Processing SportGroup iteration number: 0
+[2025-03-15T17:37:42.149Z] processing Contest number: 0
+[2025-03-15T17:37:49.337Z] Clicked on the breadcrumb for eventId: 50852635
+[2025-03-15T17:37:50.116Z] Successfully navigated back for eventId: 50852635
+[2025-03-15T17:37:50.116Z] processing Contest number: 1
+[2025-03-15T17:37:57.439Z] Clicked on the breadcrumb for eventId: 51103577
+[2025-03-15T17:37:58.189Z] Successfully navigated back for eventId: 51103577
+[2025-03-15T17:37:58.189Z] processing Contest number: 2
+[2025-03-15T17:38:04.184Z] Clicked on the breadcrumb for eventId: 51829703
+[2025-03-15T17:38:04.327Z] [31mError processing contest 51829703: TypeError: colors.yellow is not a function[39m
+[2025-03-15T17:38:04.327Z] [31mError in process contest 2, inside loop: TypeError: colors.yellow is not a function[39m
+[2025-03-15T17:38:04.328Z] [31mError saving data or scraping: TypeError: colors.yellow is not a function [39m
+[2025-03-15T17:38:04.329Z] [34mExecution time: 42292 ms[39m

@@ -38,8 +38,8 @@ async function scrapeLuckia() {
     headless: false, //change for false when working locally and for "new" when working on production
     slowMo: 50,
     devtools: true,
-    executablePath:
-      "/app/.cache/puppeteer/chrome/linux-134.0.6998.35/chrome-linux64/chrome",
+    // executablePath:
+    //"/app/.cache/puppeteer/chrome/linux-134.0.6998.35/chrome-linux64/chrome",
     //"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   });
   const page = await browser.newPage();
