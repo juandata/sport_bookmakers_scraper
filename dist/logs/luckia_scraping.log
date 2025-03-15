@@ -141,3 +141,13 @@
 [2025-03-14T01:55:35.407Z] Successfully navigated back for eventId: 58855433
 [2025-03-14T01:55:35.410Z] [32mSAVED luckia_data.json DATA SUCCESSFULLY[39m
 [2025-03-14T01:55:35.410Z] [34mExecution time: 336873 ms[39m
+[2025-03-15T17:33:44.683Z] Current .spinnerUpcoming count is : 0
+[2025-03-15T17:33:45.628Z] Current .spinnerUpcoming count is : 0
+[2025-03-15T17:33:46.557Z] Current .spinnerUpcoming count is : 0
+[2025-03-15T17:33:47.487Z] Current .spinnerUpcoming count is : 0
+[2025-03-15T17:33:48.422Z] Current .spinnerUpcoming count is : 0
+[2025-03-15T17:33:48.422Z] Finished scrolling. Found 0 elements.
+[2025-03-15T17:33:48.556Z] [32mHTML saved to E:\MERN\web_scraper\dist\htmlDumps\after_scrolling.html[39m
+[2025-03-15T17:33:49.110Z] Processing SportGroup iteration number: 0
+[2025-03-15T17:33:49.171Z] [31mError getting sportName and sportId classes[39m
+[2025-03-15T17:33:49.171Z] [34mExecution time: 24925 ms[39m

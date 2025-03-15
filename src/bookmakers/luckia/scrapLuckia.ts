@@ -13,6 +13,7 @@ import {
 } from "../../types/luckiaDataTypes.js";
 import { delay } from "../../utils/index.js";
 import { initializeLogStream, closeLogStream } from "../../utils/logger.js";
+//import { executablePath } from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +23,7 @@ const navigationTimeout = 30000;
 const elementTimeout = 10000;
 const htmlDumpDir = path.join(__dirname, "..", "..", "htmlDumps");
 const logFileName = "luckia_scraping.log";
+//const env = process.env.NODE_ENV || "development";
 // @ts-expect-error expect error
 puppeteerExtra.use(StealthPlugin());
 
@@ -36,6 +38,9 @@ async function scrapeLuckia() {
     headless: false, //change for false when working locally and for "new" when working on production
     slowMo: 50,
     devtools: true,
+    executablePath:
+      "/app/.cache/puppeteer/chrome/linux-134.0.6998.35/chrome-linux64/chrome",
+    //"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   });
   const page = await browser.newPage();
   await page.setViewport({
